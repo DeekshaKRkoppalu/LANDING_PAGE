@@ -1,0 +1,221 @@
+/* Reset styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    box-sizing: border-box;
+    background-color: #181818; /* Dark background color */
+    color: #f0f8ff; /* Light text color */
+    height: 100%;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+/* Navbar styles */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #8a2be2; /* Blue Violet background */
+    z-index: 1000;
+    transition: background-color 0.3s;
+    padding: 20px 0;
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em; /* Increase font size */
+    font-family: 'Playfair Display', serif; /* Stylish font */
+    font-weight: bold; /* Make the font bold */
+}
+
+#navbar ul li {
+    margin: 0 25px; /* Increase margin for spacing */
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#navbar ul li a:hover {
+    background-color: #4a127e; /* Darker Blue Violet */
+    color: #fff;
+}
+
+/* Header styles */
+header {
+    height: 100vh;
+    background: url('watch1.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the start (left) of the header */
+    color: white;
+    text-align: left;
+    padding-left: 30px; /* Add some padding to the left */
+    animation: moveBackground 10s linear infinite, swapImage 20s linear infinite; /* Add animation */
+}
+
+/* Animation for moving background */
+@keyframes moveBackground {
+    0% {
+        background-position: left center;
+    }
+    100% {
+        background-position: right center;
+    }
+}
+
+/* Animation for swapping background image */
+@keyframes swapImage {
+    0% {
+        background-image: url('watch1.jpg');
+    }
+    50% {
+        background-image: url('watch.jpg');
+    }
+    100% {
+        background-image: url('watch1.jpg');
+    }
+}
+
+.hero-content {
+    background-color: rgba(7, 4, 4, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px; /* Optional: Limit the width of the content */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    background-color: #03021b; /* Dark background color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 1em;
+}
+
+.cta-button:hover {
+    background-color: #03021b; /* Darker background color */
+}
+
+/* Main section styles */
+section {
+    padding: 60px 30px;
+    text-align: center;
+}
+
+section h2 {
+    color: #f0f8ff; /* Light color for section headings */
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+/* Feature and Pricing Grid Styles */
+.feature-grid, .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.feature-item, .pricing-item {
+    padding: 20px;
+    background-color: #333; /* Dark background for items */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    position: relative;
+    color: #f0f8ff; /* Light text color */
+    font-family: 'Playfair Display', serif; /* Stylish font */
+}
+
+.feature-item img, .pricing-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover img, .pricing-item:hover img {
+    transform: scale(1.2); /* Zoom in on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+.feature-item ul, .pricing-item ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.feature-item li, .pricing-item li {
+    margin-bottom: 10px;
+    color: #ddd; /* Lighter text for list items */
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #181818; /* Dark background for inputs */
+    color: #f0f8ff; /* Light text color for inputs */
+}
+
+form input:focus, form textarea:focus {
+    border-color: #03021b; /* Steel Blue border on focus */
+    outline: none;
+}
+
+button.cta-button {
+    padding: 12px 25px;
+    background-color: #03021b; /* Steel Blue */
+    color: white;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+button.cta-button:hover {
+    background-color: #3b6d96; /* Darker Steel Blue */
+}
+
+/* Footer styles */
+footer {
+    background-color: #0b0113; /* Blue Violet background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
